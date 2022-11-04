@@ -8,21 +8,34 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @EnvironmentObject var bikesViewModel: BikesViewModel
-    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            SalespersonsView()
+                .tabItem {
+                    Label("Salespersons", systemImage: "person.fill")
+                }
+            
+            Text("Products")
+                .tabItem {
+                    Label("Products", systemImage: "bicycle")
+                }
+            
+            Text("Customers")
+                .tabItem {
+                    Label("Customers", systemImage: "person.3.fill")
+                }
+            
+            Text("Sales")
+                .tabItem {
+                    Label("Sales", systemImage: "tag.fill")
+                }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
+            .environmentObject(BikesViewModel.sampleData)
     }
 }
