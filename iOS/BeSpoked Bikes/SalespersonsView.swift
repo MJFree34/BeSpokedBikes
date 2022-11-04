@@ -10,6 +10,8 @@ import SwiftUI
 struct SalespersonsView: View {
     @EnvironmentObject var bikesViewModel: BikesViewModel
     
+    @State private var showingAddSalesperson = false
+    
     var body: some View {
         NavigationStack {
             List {
@@ -18,6 +20,18 @@ struct SalespersonsView: View {
                 }
             }
             .navigationTitle("Salespersons")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddSalesperson = true
+                    } label: {
+                        Label("Add salesperson", systemImage: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingAddSalesperson) {
+                AddSalespersonView()
+            }
         }
     }
     

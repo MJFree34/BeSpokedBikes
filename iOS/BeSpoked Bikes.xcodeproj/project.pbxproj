@@ -17,6 +17,7 @@
 		9A1BA58E2914B2E500FC919C /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA58D2914B2E500FC919C /* Sale.swift */; };
 		9A1BA5902914B30C00FC919C /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA58F2914B30C00FC919C /* Discount.swift */; };
 		9A2E1B172915AE76001547BD /* SalespersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2E1B162915AE76001547BD /* SalespersonsView.swift */; };
+		9A2E1B192915B800001547BD /* AddSalespersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2E1B182915B800001547BD /* AddSalespersonView.swift */; };
 		9A82AA6B2914B7FD007B8183 /* BikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82AA6A2914B7FD007B8183 /* BikesViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		9A1BA58D2914B2E500FC919C /* Sale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sale.swift; sourceTree = "<group>"; };
 		9A1BA58F2914B30C00FC919C /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		9A2E1B162915AE76001547BD /* SalespersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalespersonsView.swift; sourceTree = "<group>"; };
+		9A2E1B182915B800001547BD /* AddSalespersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSalespersonView.swift; sourceTree = "<group>"; };
 		9A82AA6A2914B7FD007B8183 /* BikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				9A1BA5782914AFE000FC919C /* BeSpoked_BikesApp.swift */,
 				9A1BA57A2914AFE000FC919C /* MainTabView.swift */,
 				9A2E1B162915AE76001547BD /* SalespersonsView.swift */,
+				9A2E1B182915B800001547BD /* AddSalespersonView.swift */,
 				9A82AA6A2914B7FD007B8183 /* BikesViewModel.swift */,
 				9A1BA5862914B1DA00FC919C /* Data */,
 				9A1BA57C2914AFE100FC919C /* Assets.xcassets */,
@@ -166,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2E1B192915B800001547BD /* AddSalespersonView.swift in Sources */,
 				9A1BA57B2914AFE000FC919C /* MainTabView.swift in Sources */,
 				9A82AA6B2914B7FD007B8183 /* BikesViewModel.swift in Sources */,
 				9A1BA5902914B30C00FC919C /* Discount.swift in Sources */,
