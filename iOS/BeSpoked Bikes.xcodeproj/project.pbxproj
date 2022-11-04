@@ -18,6 +18,7 @@
 		9A1BA5902914B30C00FC919C /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA58F2914B30C00FC919C /* Discount.swift */; };
 		9A2E1B172915AE76001547BD /* SalespersonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2E1B162915AE76001547BD /* SalespersonsView.swift */; };
 		9A2E1B192915B800001547BD /* AddSalespersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2E1B182915B800001547BD /* AddSalespersonView.swift */; };
+		9A2E1B1B2915C2D2001547BD /* EditSalespersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2E1B1A2915C2D2001547BD /* EditSalespersonView.swift */; };
 		9A82AA6B2914B7FD007B8183 /* BikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A82AA6A2914B7FD007B8183 /* BikesViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		9A1BA58F2914B30C00FC919C /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 		9A2E1B162915AE76001547BD /* SalespersonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalespersonsView.swift; sourceTree = "<group>"; };
 		9A2E1B182915B800001547BD /* AddSalespersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSalespersonView.swift; sourceTree = "<group>"; };
+		9A2E1B1A2915C2D2001547BD /* EditSalespersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSalespersonView.swift; sourceTree = "<group>"; };
 		9A82AA6A2914B7FD007B8183 /* BikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				9A1BA5782914AFE000FC919C /* BeSpoked_BikesApp.swift */,
 				9A1BA57A2914AFE000FC919C /* MainTabView.swift */,
 				9A2E1B162915AE76001547BD /* SalespersonsView.swift */,
+				9A2E1B1A2915C2D2001547BD /* EditSalespersonView.swift */,
 				9A2E1B182915B800001547BD /* AddSalespersonView.swift */,
 				9A82AA6A2914B7FD007B8183 /* BikesViewModel.swift */,
 				9A1BA5862914B1DA00FC919C /* Data */,
@@ -174,6 +177,7 @@
 				9A82AA6B2914B7FD007B8183 /* BikesViewModel.swift in Sources */,
 				9A1BA5902914B30C00FC919C /* Discount.swift in Sources */,
 				9A1BA58C2914B2A100FC919C /* Customer.swift in Sources */,
+				9A2E1B1B2915C2D2001547BD /* EditSalespersonView.swift in Sources */,
 				9A1BA5792914AFE000FC919C /* BeSpoked_BikesApp.swift in Sources */,
 				9A1BA5882914B1EB00FC919C /* Product.swift in Sources */,
 				9A2E1B172915AE76001547BD /* SalespersonsView.swift in Sources */,

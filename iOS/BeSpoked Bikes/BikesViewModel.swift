@@ -13,6 +13,8 @@ class BikesViewModel: ObservableObject {
     @Published var customers: [Customer]
     @Published var sales: [Sale]
     
+    var selectedSalespersonToEdit: Salesperson?
+    
     init(salespersons: [Salesperson], products: [Product], customers: [Customer], sales: [Sale]) {
         self.salespersons = salespersons
         self.products = products

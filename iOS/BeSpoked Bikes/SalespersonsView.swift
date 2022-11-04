@@ -8,29 +8,67 @@
 import SwiftUI
 
 struct SalespersonsView: View {
+    private enum SheetType: Identifiable {
+        var id: Int { hashValue }
+        case add, edit
+    }
+    
+    @Environment(\.editMode) private var editMode
+    
     @EnvironmentObject var bikesViewModel: BikesViewModel
     
-    @State private var showingAddSalesperson = false
+    @State private var currentSheet: SheetType?
     
     var body: some View {
         NavigationStack {
             List {
                 ForEach(bikesViewModel.salespersons) { salesperson in
                     salespersonRow(salesperson)
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                bikesViewModel.salespersons.remove(at: bikesViewModel.salespersons.firstIndex(of: salesperson) ?? 0)
+                            } label: {
+                                Label("Remove", systemImage: "trash")
+                            }
+                        }
+                    
+                        .swipeActions(edge: .leading) {
+                            Button {
+                                bikesViewModel.selectedSalespersonToEdit = salesperson
+                                currentSheet = .edit
+                            } label: {
+                                Label("Edit", systemImage: "pencil")
+                            }
+                            .tint(.yellow)
+                        }
+                }
+                .onMove { indexSet, offset in
+                    bikesViewModel.salespersons.move(fromOffsets: indexSet, toOffset: offset)
+                }
+                .onDelete { indexSet in
+                    bikesViewModel.salespersons.remove(atOffsets: indexSet)
                 }
             }
             .navigationTitle("Salespersons")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        showingAddSalesperson = true
+                        currentSheet = .add
                     } label: {
-                        Label("Add salesperson", systemImage: "plus")
+                        Label("Add Salesperson", systemImage: "plus")
                     }
                 }
             }
-            .sheet(isPresented: $showingAddSalesperson) {
-                AddSalespersonView()
+            .sheet(item: $currentSheet) { sheetType in
+                if sheetType == .add {
+                    AddSalespersonView()
+                } else {
+                    EditSalespersonView(salesperson: bikesViewModel.selectedSalespersonToEdit!)
+                }
             }
         }
     }

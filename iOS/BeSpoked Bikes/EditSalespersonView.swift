@@ -1,5 +1,5 @@
 //
-//  AddSalespersonView.swift
+//  SalespersonDetailView.swift
 //  BeSpoked Bikes
 //
 //  Created by Matt Free on 11/4/22.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct AddSalespersonView: View {
+struct EditSalespersonView: View {
+    var salesperson: Salesperson
+    
     @Environment(\.dismiss) private var dismiss
     
     @EnvironmentObject var bikesViewModel: BikesViewModel
@@ -20,6 +22,19 @@ struct AddSalespersonView: View {
     @State var terminated = false
     @State var terminationDate = Date.now
     @State var manager = ""
+    
+    init(salesperson: Salesperson) {
+        self.salesperson = salesperson
+        
+        self._firstName = State(wrappedValue: salesperson.firstName)
+        self._lastName = State(wrappedValue: salesperson.lastName)
+        self._address = State(wrappedValue: salesperson.address)
+        self._phoneNumber = State(wrappedValue: salesperson.phoneNumber)
+        self._startDate = State(wrappedValue: salesperson.startDate)
+        self._terminated = State(wrappedValue: salesperson.terminationDate != nil)
+        self._terminationDate = State(wrappedValue: salesperson.terminationDate ?? Date.now)
+        self._manager = State(wrappedValue: salesperson.manager)
+    }
     
     var isFilledOut: Bool {
         !firstName.isEmpty && !lastName.isEmpty && !address.isEmpty && !phoneNumber.isEmpty && !manager.isEmpty
@@ -68,7 +83,9 @@ struct AddSalespersonView: View {
                 
                 ToolbarItem(placement: .bottomBar) {
                     Button {
-                        let salesperson = Salesperson(
+                        let index = bikesViewModel.salespersons.firstIndex(of: salesperson) ?? 0
+                        
+                        let newSalesperson = Salesperson(
                             firstName: firstName,
                             lastName: lastName,
                             address: address,
@@ -78,11 +95,11 @@ struct AddSalespersonView: View {
                             manager: manager
                         )
                         
-                        bikesViewModel.salespersons.append(salesperson)
+                        bikesViewModel.salespersons[index] = newSalesperson
                         
                         dismiss()
                     } label: {
-                        Text("Add \(firstName.isEmpty ? "John" : firstName) \(lastName.isEmpty ? "Doe" : lastName)")
+                        Text("Update \(firstName.isEmpty ? "John" : firstName) \(lastName.isEmpty ? "Doe" : lastName)")
                     }
                     .buttonStyle(.bordered)
                     .disabled(!isFilledOut)
@@ -92,9 +109,9 @@ struct AddSalespersonView: View {
     }
 }
 
-struct AddSalespersonView_Previews: PreviewProvider {
+struct SalespersonDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AddSalespersonView()
+        EditSalespersonView(salesperson: BikesViewModel.sampleData.salespersons[0])
             .environmentObject(BikesViewModel.sampleData)
     }
 }
