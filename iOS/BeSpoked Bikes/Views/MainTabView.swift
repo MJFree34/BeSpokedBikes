@@ -20,7 +20,7 @@ struct MainTabView: View {
                     Label("Products", systemImage: "bicycle")
                 }
             
-            Text("Customers")
+            CustomersView()
                 .tabItem {
                     Label("Customers", systemImage: "person.3.fill")
                 }

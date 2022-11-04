@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Customer {
+struct Customer: Identifiable {
+    var id: String { "\(firstName) \(lastName)"}
+    
     let firstName: String
     let lastName: String
     let address: String
