@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainTabView: View {
+    @EnvironmentObject var bikesViewModel: BikesViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")

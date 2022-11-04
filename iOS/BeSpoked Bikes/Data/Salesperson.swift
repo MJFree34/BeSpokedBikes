@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Salesperson: Equatable {
+struct Salesperson: Equatable, Identifiable {
+    var id: String { firstName + lastName }
+    
     let firstName: String
     let lastName: String
     let address: String

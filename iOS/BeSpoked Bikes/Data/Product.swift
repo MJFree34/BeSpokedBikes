@@ -12,7 +12,7 @@ struct Product: Equatable {
     let manufacturer: String
     let style: String
     let purchasePrice: Double
-    let salePrice: Double
+    let salePrice: Double?
     let quantityOnHand: Int
     let commissionPercentage: Int
 }

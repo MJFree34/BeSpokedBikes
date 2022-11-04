@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct BeSpoked_BikesApp: App {
+    @StateObject private var bikesViewModel: BikesViewModel
+    
+    init() {
+        _bikesViewModel = StateObject(wrappedValue: BikesViewModel.sampleData)
+    }
+    
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .environmentObject(bikesViewModel)
         }
     }
 }
