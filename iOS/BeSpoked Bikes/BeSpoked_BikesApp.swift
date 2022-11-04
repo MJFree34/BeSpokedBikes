@@ -11,7 +11,7 @@ import SwiftUI
 struct BeSpoked_BikesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
     }
 }
