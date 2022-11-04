@@ -30,13 +30,6 @@ struct SalesView: View {
             
             Grid(alignment: .leading) {
                 GridRow {
-                    Text("Salesperson:")
-                    
-                    Text("\(sale.salesperson.firstName) \(sale.salesperson.lastName)")
-                        .font(.caption)
-                }
-                
-                GridRow {
                     Text("Customer:")
                     
                     Text("\(sale.customer.firstName) \(sale.customer.lastName)")
@@ -47,6 +40,27 @@ struct SalesView: View {
                     Text("Sale Date:")
                     
                     Text(sale.saleDate.formatted(date: .numeric, time: .omitted))
+                        .font(.caption)
+                }
+                
+                GridRow {
+                    Text("Sale Price:")
+                    
+                    Text(String(format: "$%.2f", sale.product.salePrice))
+                        .font(.caption)
+                }
+                
+                GridRow {
+                    Text("Salesperson:")
+                    
+                    Text("\(sale.salesperson.firstName) \(sale.salesperson.lastName)")
+                        .font(.caption)
+                }
+                
+                GridRow {
+                    Text("Commission:")
+                    
+                    Text("\(sale.product.commissionPercentage)%")
                         .font(.caption)
                 }
             }
