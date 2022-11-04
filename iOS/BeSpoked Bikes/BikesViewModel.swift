@@ -14,6 +14,7 @@ class BikesViewModel: ObservableObject {
     @Published var sales: [Sale]
     
     var selectedSalespersonToEdit: Salesperson?
+    var selectedProductToEdit: Product?
     
     init(salespersons: [Salesperson], products: [Product], customers: [Customer], sales: [Sale]) {
         self.salespersons = salespersons
@@ -214,7 +215,7 @@ extension BikesViewModel {
                 manufacturer: "Polygon",
                 style: "Trail Mountain Bike",
                 purchasePrice: 2699.00,
-                salePrice: nil,
+                salePrice: 2699.00,
                 quantityOnHand: 2,
                 commissionPercentage: 4
             ),
@@ -232,7 +233,7 @@ extension BikesViewModel {
                 manufacturer: "Marin",
                 style: "Gravel Bike",
                 purchasePrice: 1099.00,
-                salePrice: nil,
+                salePrice: 1099.00,
                 quantityOnHand: 3,
                 commissionPercentage: 5
             ),
@@ -241,7 +242,7 @@ extension BikesViewModel {
                 manufacturer: "Marin",
                 style: "Gravel Bike",
                 purchasePrice: 1199.00,
-                salePrice: nil,
+                salePrice: 1199.00,
                 quantityOnHand: 7,
                 commissionPercentage: 6
             ),

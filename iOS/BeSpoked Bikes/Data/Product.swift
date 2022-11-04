@@ -7,12 +7,14 @@
 
 import Foundation
 
-struct Product: Equatable {
-    let name: String
-    let manufacturer: String
-    let style: String
-    let purchasePrice: Double
-    let salePrice: Double?
-    let quantityOnHand: Int
-    let commissionPercentage: Int
+struct Product: Equatable, Identifiable {
+    var id: String { "\(manufacturer) \(name)" }
+    
+    var name: String
+    var manufacturer: String
+    var style: String
+    var purchasePrice: Double
+    var salePrice: Double
+    var quantityOnHand: Int
+    var commissionPercentage: Int
 }
