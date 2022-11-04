@@ -11,6 +11,11 @@
 		9A1BA57B2914AFE000FC919C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA57A2914AFE000FC919C /* ContentView.swift */; };
 		9A1BA57D2914AFE100FC919C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BA57C2914AFE100FC919C /* Assets.xcassets */; };
 		9A1BA5802914AFE100FC919C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A1BA57F2914AFE100FC919C /* Preview Assets.xcassets */; };
+		9A1BA5882914B1EB00FC919C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA5872914B1EB00FC919C /* Product.swift */; };
+		9A1BA58A2914B26200FC919C /* Salesperson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA5892914B26200FC919C /* Salesperson.swift */; };
+		9A1BA58C2914B2A100FC919C /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA58B2914B2A100FC919C /* Customer.swift */; };
+		9A1BA58E2914B2E500FC919C /* Sale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA58D2914B2E500FC919C /* Sale.swift */; };
+		9A1BA5902914B30C00FC919C /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1BA58F2914B30C00FC919C /* Discount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		9A1BA57A2914AFE000FC919C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9A1BA57C2914AFE100FC919C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A1BA57F2914AFE100FC919C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9A1BA5872914B1EB00FC919C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9A1BA5892914B26200FC919C /* Salesperson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Salesperson.swift; sourceTree = "<group>"; };
+		9A1BA58B2914B2A100FC919C /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		9A1BA58D2914B2E500FC919C /* Sale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sale.swift; sourceTree = "<group>"; };
+		9A1BA58F2914B30C00FC919C /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,7 @@
 			children = (
 				9A1BA5782914AFE000FC919C /* BeSpoked_BikesApp.swift */,
 				9A1BA57A2914AFE000FC919C /* ContentView.swift */,
+				9A1BA5862914B1DA00FC919C /* Data */,
 				9A1BA57C2914AFE100FC919C /* Assets.xcassets */,
 				9A1BA57E2914AFE100FC919C /* Preview Content */,
 			);
@@ -65,6 +76,18 @@
 				9A1BA57F2914AFE100FC919C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9A1BA5862914B1DA00FC919C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9A1BA5872914B1EB00FC919C /* Product.swift */,
+				9A1BA5892914B26200FC919C /* Salesperson.swift */,
+				9A1BA58B2914B2A100FC919C /* Customer.swift */,
+				9A1BA58D2914B2E500FC919C /* Sale.swift */,
+				9A1BA58F2914B30C00FC919C /* Discount.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +125,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9A1BA5702914AFE000FC919C /* Build configuration list for PBXProject "BeSpokedBikes" */;
+			buildConfigurationList = 9A1BA5702914AFE000FC919C /* Build configuration list for PBXProject "BeSpoked Bikes" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,7 +161,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A1BA57B2914AFE000FC919C /* ContentView.swift in Sources */,
+				9A1BA5902914B30C00FC919C /* Discount.swift in Sources */,
+				9A1BA58C2914B2A100FC919C /* Customer.swift in Sources */,
 				9A1BA5792914AFE000FC919C /* BeSpoked_BikesApp.swift in Sources */,
+				9A1BA5882914B1EB00FC919C /* Product.swift in Sources */,
+				9A1BA58E2914B2E500FC919C /* Sale.swift in Sources */,
+				9A1BA58A2914B26200FC919C /* Salesperson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +350,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9A1BA5702914AFE000FC919C /* Build configuration list for PBXProject "BeSpokedBikes" */ = {
+		9A1BA5702914AFE000FC919C /* Build configuration list for PBXProject "BeSpoked Bikes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9A1BA5812914AFE100FC919C /* Debug */,
