@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Sale {
+struct Sale: Identifiable {
+    var id: String { "\(product.manufacturer) \(product.name), \(salesperson.firstName) \(salesperson.lastName), \(customer.firstName) \(customer.lastName)" }
+    
     let product: Product
     let salesperson: Salesperson
     let customer: Customer

@@ -25,7 +25,7 @@ struct MainTabView: View {
                     Label("Customers", systemImage: "person.3.fill")
                 }
             
-            Text("Sales")
+            SalesView()
                 .tabItem {
                     Label("Sales", systemImage: "tag.fill")
                 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CustomersView: View {
-    
     @EnvironmentObject var bikesViewModel: BikesViewModel
     
     var body: some View {
@@ -55,7 +54,7 @@ struct CustomersView: View {
     }
 }
 
-struct SalesView_Previews: PreviewProvider {
+struct CustomersView_Previews: PreviewProvider {
     static var previews: some View {
         CustomersView()
             .environmentObject(BikesViewModel.sampleData)
